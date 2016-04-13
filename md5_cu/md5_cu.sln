@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "md5_cu", "md5_cu\md5_cu.vcxproj", "{FE397168-2216-4F15-A53C-C97D7F9B7686}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "md5_cu", "md5_cu\md5_cu.vcxproj", "{08350B03-E58F-43EC-86D5-274B78BACF23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Debug|Win32.ActiveCfg = Debug|Win32
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Debug|Win32.Build.0 = Debug|Win32
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Debug|x64.ActiveCfg = Debug|x64
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Debug|x64.Build.0 = Debug|x64
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Release|Win32.ActiveCfg = Release|Win32
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Release|Win32.Build.0 = Release|Win32
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Release|x64.ActiveCfg = Release|x64
-		{FE397168-2216-4F15-A53C-C97D7F9B7686}.Release|x64.Build.0 = Release|x64
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Debug|Win32.Build.0 = Debug|Win32
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Debug|x64.ActiveCfg = Debug|x64
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Debug|x64.Build.0 = Debug|x64
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Release|Win32.ActiveCfg = Release|Win32
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Release|Win32.Build.0 = Release|Win32
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Release|x64.ActiveCfg = Release|x64
+		{08350B03-E58F-43EC-86D5-274B78BACF23}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
