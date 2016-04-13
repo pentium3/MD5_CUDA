@@ -1,5 +1,5 @@
 md5:
-Original RSA_MD%.c . 
+Original RSA_MD5.c . 
 It is so old(programmed in 1990) that it is not compatible with modern g++ compiler.
 
 md5_cpp:

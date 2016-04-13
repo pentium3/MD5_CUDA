@@ -1,0 +1,22 @@
+﻿生成启动时间为 2014/5/23 14:37:22。
+     1>项目“F:\workspace_c++\securityPrj\md5GPUCrack\md5GPUCrack\md5GPUCrack.vcxproj”在节点 2 上(Build 个目标)。
+     1>AddCudaCompileDeps:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_UNICODE /DUNICODE /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include" /I. /FIcuda_runtime.h /c F:\workspace_c++\securityPrj\md5GPUCrack\md5GPUCrack\main.cu 
+       CudaBuild:
+         Compiling CUDA source file main.cu...
+         cmd.exe /C "C:\Users\V\AppData\Local\Temp\tmpab7fb1e26fb041d0a11dd10739d0f859.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2012 -ccbin "D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler "/wd 4819" -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug\main.cu.obj "F:\workspace_c++\securityPrj\md5GPUCrack\md5GPUCrack\main.cu"
+         
+         F:\workspace_c++\securityPrj\md5GPUCrack\md5GPUCrack>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2012 -ccbin "D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler "/wd 4819" -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug\main.cu.obj "F:\workspace_c++\securityPrj\md5GPUCrack\md5GPUCrack\main.cu" 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\workspace_c++\securityPrj\md5GPUCrack\x64\Debug\md5GPUCrack.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\lib\x64" /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\lib\x64" cuda.lib cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\workspace_c++\securityPrj\md5GPUCrack\x64\Debug\md5GPUCrack.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\workspace_c++\securityPrj\md5GPUCrack\x64\Debug\md5GPUCrack.lib" /MACHINE:X64 x64\Debug\findMessage.cu.obj
+         x64\Debug\gupMD5.cu.obj
+         x64\Debug\main.cu.obj
+         x64\Debug\utility.cu.obj
+         x64\Debug\stdafx.cu.obj
+         md5GPUCrack.vcxproj -> F:\workspace_c++\securityPrj\md5GPUCrack\x64\Debug\md5GPUCrack.exe
+     1>已完成生成项目“F:\workspace_c++\securityPrj\md5GPUCrack\md5GPUCrack\md5GPUCrack.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:15.74
