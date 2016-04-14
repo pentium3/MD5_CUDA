@@ -100,13 +100,14 @@ __global__ void searchMD5(float* d_startNumbers, float nIterations, size_t chars
 			//得到多出来的位数
 			numberToConvert = floorf(fmodf(numberToConvert, d_powerValues[NUM_POWER_VALUES - size + i]));
 		}
-		/*printf("线程%d的起始搜索地址：",idx);
+		/*
+		printf("线程%d的起始搜索地址：",idx);
 		for (size_t i = 0; i != size; ++i){
 			toHashAsChar[i] = d_powerSymbols[toHashAsCharIndices[i]];
 			printf("%c",toHashAsChar[i]);
 		}
-		printf("\n");*/
-
+		printf("\n");
+		*/
 		#pragma unroll 5
 		for(float iterationsDone = 0; iterationsDone != nIterations; ++iterationsDone){
 			if (*d_isFound == 1) break;

@@ -17,8 +17,8 @@ pair<bool, string> findMessage(size_t min, size_t max, string searchScope) {
 	string message = "";
 	
 	//GoForce GT650M 比较优秀的设置：1024*1024
-	int nBlocks = 512;
-	int nThreadsPerBlock = 512;
+	int nBlocks = 1024;
+	int nThreadsPerBlock = 960;
 	size_t nTotalThreads = nBlocks * nThreadsPerBlock; // 总线程数
 	size_t charsetLength = searchScope.length();  //搜索空间字符数长度
 
@@ -62,7 +62,8 @@ pair<bool, string> findMessage(size_t min, size_t max, string searchScope) {
     
 		cudaThreadSynchronize();
 
-		cout<<"耗时："<<(clock()-start)/CLK_TCK<<endl;
+		//cout<<"Duration (s): "<<(clock()-start)/CLK_TCK<<endl;
+		printf("Duration:  %.5f (s)\n",(float)(clock()-start)/CLK_TCK);
 
 		printf("%s\n", cudaGetErrorString(cudaGetLastError()));
 		cudaMemcpy(&h_isFound, d_isFound, sizeof(int), cudaMemcpyDeviceToHost);
