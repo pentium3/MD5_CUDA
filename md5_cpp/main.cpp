@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstring>
 #include<cstdio>
+#include<time.h>
 using namespace std;
 
 /* typedef a 32 bit type */
@@ -141,15 +142,7 @@ void MD5Final (MD5_CTX *mdContext)
   }
 }
 
-void MDPrint (MD5_CTX *mdContext)
-{
-  int i;
-
-  for (i = 0; i < 16; i++)
-    printf ("%02x", mdContext->digest[i]);
-}
-
-void MDString (unsigned char *inString)
+void MDString (int* target, unsigned char *inString)
 {
   MD5_CTX mdContext;
   const char* p = (const char*)(char*)inString;
@@ -158,40 +151,63 @@ void MDString (unsigned char *inString)
   MD5Init (&mdContext);
   MD5Update (&mdContext, inString, len);
   MD5Final (&mdContext);
-  MDPrint (&mdContext);
-  printf (" \"%s\"\n\n", inString);
+  //int* md5str=MDPrint (&mdContext);
+  for(int i=0;i<16;i++) target[i]=(int)mdContext.digest[i];
+
 }
 
-void MDFile (char *filename)
+char* searchScope = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";	//SearchScope
+int sl=strlen(searchScope);
+int* md5Str=new int[16];
+bool found=false;
+
+unsigned char search_str[]="xxxxx";
+unsigned char* str=(unsigned char*)"wD2q3";
+int search_length=5;
+
+void dfs(int x)
 {
-  FILE *inFile = fopen (filename, "rb");
-  MD5_CTX mdContext;
-  int bytes;
-  unsigned char data[1024];
-
-  if (inFile == NULL) {
-    printf ("%s can't be opened.\n", filename);
-    return;
-  }
-
-  MD5Init (&mdContext);
-  while ((bytes = fread (data, 1, 1024, inFile)) != 0)
-    MD5Update (&mdContext, data, bytes);
-  MD5Final (&mdContext);
-  MDPrint (&mdContext);
-  printf (" %s\n", filename);
-  fclose (inFile);
+    if(found)   return;
+    if(x==search_length+1)
+    {
+        int* res=new int[16];
+        MDString(res,search_str);
+        found=true;
+        for(int i=0;i<16;i++)   if(res[i]!=md5Str[i])  { found=false;   break; }
+        delete[] res;
+        if(found)
+        {
+            cout<<"FOUND  "<<search_str<<endl;
+            return;
+        }
+    }
+    else
+    {
+        for(int i=0;i<sl;i++)
+        {
+            unsigned char ch=searchScope[i];
+            search_str[x-1]=(unsigned char)ch;
+            dfs(x+1);
+            search_str[x-1]=(unsigned char)'x';
+        }
+    }
 }
-
 
 int main()
 {
-	unsigned char* str=(unsigned char*)"abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789";
+    MDString(md5Str,str);
+    for(int i=0;i<16;i++) cout<<md5Str[i]<<" ";   cout<<endl;
+    time_t ts;
+    time(&ts);
 
-	MDString(str);
-	//MDFile("D:\\2\\Downloads\\report2014.doc");
+    dfs(1);
 
-	return 0;
+    time_t te;
+    time(&te);
+
+    cout<<"Duration: (s) "<<te-ts<<endl;
+
+    return 0;
 }
 
 
